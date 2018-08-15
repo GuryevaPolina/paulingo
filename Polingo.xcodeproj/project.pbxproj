@@ -7,21 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31F793AAEF9ED0A8A9B0D5E7 /* Pods_Polingo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB2A859D0AADFE10FD1D133 /* Pods_Polingo.framework */; };
 		9F73B6812123F3960095C974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6802123F3960095C974 /* AppDelegate.swift */; };
-		9F73B6832123F3960095C974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6822123F3960095C974 /* ViewController.swift */; };
+		9F73B6832123F3960095C974 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6822123F3960095C974 /* StartViewController.swift */; };
 		9F73B6862123F3960095C974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F73B6842123F3960095C974 /* Main.storyboard */; };
 		9F73B6882123F3A20095C974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F73B6872123F3A20095C974 /* Assets.xcassets */; };
 		9F73B68B2123F3A20095C974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F73B6892123F3A20095C974 /* LaunchScreen.storyboard */; };
+		9F73B697212415320095C974 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B696212415320095C974 /* RegistrationViewController.swift */; };
+		9F73B69A21241B940095C974 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B69921241B940095C974 /* User.swift */; };
+		9F73B69F212435870095C974 /* tabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B69E212435870095C974 /* tabBarController.swift */; };
+		9F73B6A1212436C60095C974 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6A0212436C60095C974 /* LearnViewController.swift */; };
+		9F73B6A3212436DA0095C974 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6A2212436DA0095C974 /* SettingsViewController.swift */; };
+		9F73B6A5212440FB0095C974 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6A4212440FB0095C974 /* CurrentUser.swift */; };
+		9F73B6A92124449D0095C974 /* RealmManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6A82124449D0095C974 /* RealmManeger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EB2A859D0AADFE10FD1D133 /* Pods_Polingo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Polingo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F73B67D2123F3960095C974 /* Polingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F73B6802123F3960095C974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F73B6822123F3960095C974 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F73B6822123F3960095C974 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		9F73B6852123F3960095C974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F73B6872123F3A20095C974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F73B68A2123F3A20095C974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F73B68C2123F3A20095C974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F73B696212415320095C974 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		9F73B69921241B940095C974 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9F73B69E212435870095C974 /* tabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBarController.swift; sourceTree = "<group>"; };
+		9F73B6A0212436C60095C974 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
+		9F73B6A2212436DA0095C974 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9F73B6A4212440FB0095C974 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		9F73B6A82124449D0095C974 /* RealmManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManeger.swift; sourceTree = "<group>"; };
+		B999D030E5E417DD56EB5C31 /* Pods-Polingo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Polingo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Polingo/Pods-Polingo.debug.xcconfig"; sourceTree = "<group>"; };
+		D4F9377F43C467F4AEAF3DEF /* Pods-Polingo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Polingo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Polingo/Pods-Polingo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +47,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F793AAEF9ED0A8A9B0D5E7 /* Pods_Polingo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48E75446A9A996C115B2EE85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EB2A859D0AADFE10FD1D133 /* Pods_Polingo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9F73B6742123F3960095C974 = {
 			isa = PBXGroup;
 			children = (
 				9F73B67F2123F3960095C974 /* Polingo */,
 				9F73B67E2123F3960095C974 /* Products */,
+				CFB14A1A734251185998AED8 /* Pods */,
+				48E75446A9A996C115B2EE85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +83,54 @@
 		9F73B67F2123F3960095C974 /* Polingo */ = {
 			isa = PBXGroup;
 			children = (
+				9F73B69821241B850095C974 /* Model */,
+				9F73B6922123F4D50095C974 /* Registration and authorization */,
+				9F73B69B21242BD10095C974 /* tab bar view controllers */,
 				9F73B6802123F3960095C974 /* AppDelegate.swift */,
-				9F73B6822123F3960095C974 /* ViewController.swift */,
 				9F73B6842123F3960095C974 /* Main.storyboard */,
 				9F73B6872123F3A20095C974 /* Assets.xcassets */,
 				9F73B6892123F3A20095C974 /* LaunchScreen.storyboard */,
 				9F73B68C2123F3A20095C974 /* Info.plist */,
 			);
 			path = Polingo;
+			sourceTree = "<group>";
+		};
+		9F73B6922123F4D50095C974 /* Registration and authorization */ = {
+			isa = PBXGroup;
+			children = (
+				9F73B6822123F3960095C974 /* StartViewController.swift */,
+				9F73B696212415320095C974 /* RegistrationViewController.swift */,
+			);
+			path = "Registration and authorization";
+			sourceTree = "<group>";
+		};
+		9F73B69821241B850095C974 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F73B69921241B940095C974 /* User.swift */,
+				9F73B6A4212440FB0095C974 /* CurrentUser.swift */,
+				9F73B6A82124449D0095C974 /* RealmManeger.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9F73B69B21242BD10095C974 /* tab bar view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F73B69E212435870095C974 /* tabBarController.swift */,
+				9F73B6A0212436C60095C974 /* LearnViewController.swift */,
+				9F73B6A2212436DA0095C974 /* SettingsViewController.swift */,
+			);
+			path = "tab bar view controllers";
+			sourceTree = "<group>";
+		};
+		CFB14A1A734251185998AED8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B999D030E5E417DD56EB5C31 /* Pods-Polingo.debug.xcconfig */,
+				D4F9377F43C467F4AEAF3DEF /* Pods-Polingo.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F73B68F2123F3A20095C974 /* Build configuration list for PBXNativeTarget "Polingo" */;
 			buildPhases = (
+				B770B6A1142A184B3E3402F1 /* [CP] Check Pods Manifest.lock */,
 				9F73B6792123F3960095C974 /* Sources */,
 				9F73B67A2123F3960095C974 /* Frameworks */,
 				9F73B67B2123F3960095C974 /* Resources */,
+				4E5DC5996BCB584FBE6F46E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +201,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4E5DC5996BCB584FBE6F46E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Polingo/Pods-Polingo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Polingo/Pods-Polingo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B770B6A1142A184B3E3402F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Polingo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9F73B6792123F3960095C974 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F73B6832123F3960095C974 /* ViewController.swift in Sources */,
+				9F73B69A21241B940095C974 /* User.swift in Sources */,
+				9F73B697212415320095C974 /* RegistrationViewController.swift in Sources */,
+				9F73B6A3212436DA0095C974 /* SettingsViewController.swift in Sources */,
+				9F73B6A92124449D0095C974 /* RealmManeger.swift in Sources */,
+				9F73B69F212435870095C974 /* tabBarController.swift in Sources */,
+				9F73B6832123F3960095C974 /* StartViewController.swift in Sources */,
 				9F73B6812123F3960095C974 /* AppDelegate.swift in Sources */,
+				9F73B6A5212440FB0095C974 /* CurrentUser.swift in Sources */,
+				9F73B6A1212436C60095C974 /* LearnViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +397,7 @@
 		};
 		9F73B6902123F3A20095C974 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B999D030E5E417DD56EB5C31 /* Pods-Polingo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +416,7 @@
 		};
 		9F73B6912123F3A20095C974 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4F9377F43C467F4AEAF3DEF /* Pods-Polingo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

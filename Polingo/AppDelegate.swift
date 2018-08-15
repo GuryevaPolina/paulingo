@@ -7,15 +7,24 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    static var realmManager = RealmManager()
+    
+    static var username = ""
+    static var password = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if AppDelegate.realmManager.currentUser.count == 1 {
+            AppDelegate.username = AppDelegate.realmManager.currentUser[0].username
+            AppDelegate.password = AppDelegate.realmManager.currentUser[0].password
+        }
         return true
     }
 
