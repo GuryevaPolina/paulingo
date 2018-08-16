@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		31F793AAEF9ED0A8A9B0D5E7 /* Pods_Polingo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB2A859D0AADFE10FD1D133 /* Pods_Polingo.framework */; };
+		9F6EC78F21256A6A00C8ABEA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EC78E21256A6A00C8ABEA /* TabBarViewController.swift */; };
 		9F73B6812123F3960095C974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6802123F3960095C974 /* AppDelegate.swift */; };
 		9F73B6832123F3960095C974 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6822123F3960095C974 /* StartViewController.swift */; };
 		9F73B6862123F3960095C974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F73B6842123F3960095C974 /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		9F73B68B2123F3A20095C974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F73B6892123F3A20095C974 /* LaunchScreen.storyboard */; };
 		9F73B697212415320095C974 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B696212415320095C974 /* RegistrationViewController.swift */; };
 		9F73B69A21241B940095C974 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B69921241B940095C974 /* User.swift */; };
-		9F73B69F212435870095C974 /* tabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B69E212435870095C974 /* tabBarController.swift */; };
 		9F73B6A1212436C60095C974 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6A0212436C60095C974 /* LearnViewController.swift */; };
 		9F73B6A3212436DA0095C974 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6A2212436DA0095C974 /* SettingsViewController.swift */; };
 		9F73B6A5212440FB0095C974 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6A4212440FB0095C974 /* CurrentUser.swift */; };
@@ -24,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		2EB2A859D0AADFE10FD1D133 /* Pods_Polingo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Polingo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F6EC78E21256A6A00C8ABEA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		9F73B67D2123F3960095C974 /* Polingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F73B6802123F3960095C974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F73B6822123F3960095C974 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		9F73B68C2123F3A20095C974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F73B696212415320095C974 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		9F73B69921241B940095C974 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		9F73B69E212435870095C974 /* tabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBarController.swift; sourceTree = "<group>"; };
 		9F73B6A0212436C60095C974 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		9F73B6A2212436DA0095C974 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9F73B6A4212440FB0095C974 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 		9F73B69B21242BD10095C974 /* tab bar view controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9F73B69E212435870095C974 /* tabBarController.swift */,
+				9F6EC78E21256A6A00C8ABEA /* TabBarViewController.swift */,
 				9F73B6A0212436C60095C974 /* LearnViewController.swift */,
 				9F73B6A2212436DA0095C974 /* SettingsViewController.swift */,
 			);
@@ -251,10 +251,10 @@
 				9F73B697212415320095C974 /* RegistrationViewController.swift in Sources */,
 				9F73B6A3212436DA0095C974 /* SettingsViewController.swift in Sources */,
 				9F73B6A92124449D0095C974 /* RealmManeger.swift in Sources */,
-				9F73B69F212435870095C974 /* tabBarController.swift in Sources */,
 				9F73B6832123F3960095C974 /* StartViewController.swift in Sources */,
 				9F73B6812123F3960095C974 /* AppDelegate.swift in Sources */,
 				9F73B6A5212440FB0095C974 /* CurrentUser.swift in Sources */,
+				9F6EC78F21256A6A00C8ABEA /* TabBarViewController.swift in Sources */,
 				9F73B6A1212436C60095C974 /* LearnViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

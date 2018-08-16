@@ -17,6 +17,15 @@ class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let gradient = CAGradientLayer()
+        gradient.frame = view.bounds
+        gradient.colors = [UIColor.init(cgColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)).cgColor, UIColor.init(cgColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)).cgColor, UIColor.init(cgColor: #colorLiteral(red: 0.2536556089, green: 0.4862745106, blue: 0.4094202603, alpha: 1)).cgColor]
+        view.layer.insertSublayer(gradient, at: 0)
+        
+        userNameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -79,13 +88,31 @@ class RegistrationViewController: UIViewController {
         AppDelegate.username = username
         AppDelegate.password = password
         
-        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar") as? tabBarController else {return}
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar") as? TabBarViewController else {return}
         guard let navigator = navigationController else {return}
         navigator.pushViewController(vc, animated: true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+}
+
+extension RegistrationViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField.tag {
+        case userNameTextField.tag:
+            emailTextField.becomeFirstResponder()
+        case emailTextField.tag:
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField.tag:
+            textField.resignFirstResponder()
+        default:
+            textField.resignFirstResponder()
+        }
+        return false
     }
     
 }

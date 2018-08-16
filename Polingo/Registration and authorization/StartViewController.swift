@@ -29,15 +29,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         viewInit()
         
-        print(AppDelegate.realmManager.allUsers)
-        print(AppDelegate.realmManager.currentUser)
+        //print(AppDelegate.realmManager.allUsers)
+       // print(AppDelegate.realmManager.currentUser)
         
         if !AppDelegate.username.isEmpty && !AppDelegate.password.isEmpty {
-            guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar") as? tabBarController else {return}
+            guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar") as? TabBarViewController else {return}
             guard let navigator = navigationController else {return}
             navigator.pushViewController(vc, animated: true)
         }
         
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,8 +50,8 @@ class ViewController: UIViewController {
     func viewInit() {
         gradient = CAGradientLayer()
         gradient.frame = view.bounds
-        gradient.colors = [UIColor.init(cgColor: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)).cgColor, UIColor.init(cgColor: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)).cgColor]
-        gradientView.layer.addSublayer(gradient)
+        gradient.colors = [UIColor.init(cgColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)).cgColor, UIColor.init(cgColor: #colorLiteral(red: 0.2536556089, green: 0.4862745106, blue: 0.4094202603, alpha: 1)).cgColor]
+        view.layer.insertSublayer(gradient, at: 0)
     }
 
     @IBAction func signUpButtonTapped(_ sender: Any) {
@@ -59,7 +61,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func signInButtonTapped(_ sender: Any) {
-        gradient.colors = [UIColor.init(cgColor: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)).cgColor, UIColor.init(cgColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)).cgColor]
+        gradient.colors = [UIColor.init(cgColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)).cgColor, UIColor.init(cgColor: #colorLiteral(red: 0.7372432266, green: 0.9486632664, blue: 1, alpha: 1)).cgColor, UIColor.init(cgColor: #colorLiteral(red: 0.3057607528, green: 0.7024124894, blue: 0.5779096659, alpha: 1)).cgColor]
         
         if !signInTapped {
             usernameTextField.frame.origin.x -= 300
@@ -76,7 +78,7 @@ class ViewController: UIViewController {
                 self.view1.frame.origin.x += 300
                 self.passwordTextField.frame.origin.x -= 300
                 self.view2.frame.origin.x -= 300
-                self.singInButton.frame.origin.y -= 200
+                //self.singInButton.frame.origin.y = self.view2.frame.origin.y + 32
             }
             signInTapped = true
             
@@ -94,7 +96,7 @@ class ViewController: UIViewController {
                     try! AppDelegate.realmManager.realm.write {
                         AppDelegate.realmManager.realm.add(currUser)
                     }
-                    guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar") as? tabBarController else {return}
+                    guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar") as? TabBarViewController else {return}
                     guard let navigator = navigationController else {return}
                     navigator.pushViewController(vc, animated: true)
                     return
@@ -110,6 +112,20 @@ class ViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField.tag {
+        case usernameTextField.tag:
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField.tag:
+            signInButtonTapped(UIButton())
+        default:
+            textField.resignFirstResponder()
+        }
+        return false
+    }
 }
 
 

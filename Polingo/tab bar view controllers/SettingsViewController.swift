@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: TabBarViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
