@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		31F793AAEF9ED0A8A9B0D5E7 /* Pods_Polingo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB2A859D0AADFE10FD1D133 /* Pods_Polingo.framework */; };
+		9F22BFF921259D9500B7B89D /* FlagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F22BFF821259D9400B7B89D /* FlagCollectionViewCell.swift */; };
 		9F6EC78F21256A6A00C8ABEA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EC78E21256A6A00C8ABEA /* TabBarViewController.swift */; };
 		9F73B6812123F3960095C974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6802123F3960095C974 /* AppDelegate.swift */; };
 		9F73B6832123F3960095C974 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6822123F3960095C974 /* StartViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		2EB2A859D0AADFE10FD1D133 /* Pods_Polingo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Polingo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F22BFF821259D9400B7B89D /* FlagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagCollectionViewCell.swift; sourceTree = "<group>"; };
 		9F6EC78E21256A6A00C8ABEA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		9F73B67D2123F3960095C974 /* Polingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F73B6802123F3960095C974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9F22BFF721259D5D00B7B89D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9F22BFF821259D9400B7B89D /* FlagCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		9F73B6742123F3960095C974 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 			children = (
 				9F73B69821241B850095C974 /* Model */,
 				9F73B6922123F4D50095C974 /* Registration and authorization */,
+				9F22BFF721259D5D00B7B89D /* Cells */,
 				9F73B69B21242BD10095C974 /* tab bar view controllers */,
 				9F73B6802123F3960095C974 /* AppDelegate.swift */,
 				9F73B6842123F3960095C974 /* Main.storyboard */,
@@ -247,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F22BFF921259D9500B7B89D /* FlagCollectionViewCell.swift in Sources */,
 				9F73B69A21241B940095C974 /* User.swift in Sources */,
 				9F73B697212415320095C974 /* RegistrationViewController.swift in Sources */,
 				9F73B6A3212436DA0095C974 /* SettingsViewController.swift in Sources */,

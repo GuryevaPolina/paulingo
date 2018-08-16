@@ -88,9 +88,11 @@ class RegistrationViewController: UIViewController {
         AppDelegate.username = username
         AppDelegate.password = password
         
-        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar") as? TabBarViewController else {return}
         guard let navigator = navigationController else {return}
-        navigator.pushViewController(vc, animated: true)
+        navigator.popViewController(animated: false)
+        
+        guard let tabvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar") as? TabBarViewController else {return}
+        navigator.pushViewController(tabvc, animated: true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

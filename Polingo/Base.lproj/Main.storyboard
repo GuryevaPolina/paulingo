@@ -179,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vVn-4W-rId" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1092" y="1201"/>
+            <point key="canvasLocation" x="-164" y="1996"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="43i-YD-wu6">
@@ -189,24 +189,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xt-L3-y0d">
+                                <rect key="frame" x="0.0" y="64" width="375" height="547"/>
+                            </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMr-NX-4Lx">
-                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="611" width="375" height="56"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="51u-jh-5Ph">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zF6-P0-AXH">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="64"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="56"/>
                                                 <state key="normal" image="brain"/>
                                                 <connections>
-                                                    <action selector="brainButtonTapped:" destination="dqM-Rz-3uR" eventType="touchUpInside" id="nXx-xj-O6u"/>
+                                                    <action selector="tabDidTapped:" destination="dqM-Rz-3uR" eventType="touchUpInside" id="xN1-5l-DfV"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cn6-ec-ePe">
-                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="64"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cn6-ec-ePe">
+                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="56"/>
                                                 <state key="normal" image="settings"/>
                                                 <connections>
-                                                    <action selector="settingButtonTapped:" destination="dqM-Rz-3uR" eventType="touchUpInside" id="Sh6-S1-XeY"/>
+                                                    <action selector="tabDidTapped:" destination="dqM-Rz-3uR" eventType="touchUpInside" id="Qfc-XE-pWa"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -217,23 +220,60 @@
                                     <constraint firstItem="51u-jh-5Ph" firstAttribute="centerX" secondItem="UMr-NX-4Lx" secondAttribute="centerX" id="I8G-EH-kaK"/>
                                     <constraint firstItem="51u-jh-5Ph" firstAttribute="height" secondItem="UMr-NX-4Lx" secondAttribute="height" id="deq-Wc-bCY"/>
                                     <constraint firstItem="51u-jh-5Ph" firstAttribute="centerY" secondItem="UMr-NX-4Lx" secondAttribute="centerY" id="iZh-JZ-jdY"/>
-                                    <constraint firstAttribute="height" constant="64" id="kUD-Gm-R8j"/>
+                                    <constraint firstAttribute="height" constant="56" id="kUD-Gm-R8j"/>
                                     <constraint firstItem="51u-jh-5Ph" firstAttribute="width" secondItem="UMr-NX-4Lx" secondAttribute="width" id="kZO-83-oh2"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufK-dW-ex8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ew-40-wsM">
+                                        <rect key="frame" x="16" y="28" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="C7v-Vv-Hkf"/>
+                                            <constraint firstAttribute="height" constant="32" id="dgb-Fr-dfL"/>
+                                        </constraints>
+                                        <state key="normal" image="uk"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="chooseLanguageButtonTapped:" destination="dqM-Rz-3uR" eventType="touchUpInside" id="0Hu-uV-un5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="1LT-v3-5Ex"/>
+                                    <constraint firstItem="7Ew-40-wsM" firstAttribute="leading" secondItem="ufK-dW-ex8" secondAttribute="leading" constant="16" id="Ngd-cc-UWw"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Ew-40-wsM" secondAttribute="bottom" constant="4" id="ygX-gU-jke"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94234708759999997" green="0.94234708759999997" blue="0.94234708759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="4xt-L3-y0d" firstAttribute="top" secondItem="ufK-dW-ex8" secondAttribute="bottom" id="6zh-N0-jsZ"/>
+                            <constraint firstItem="4xt-L3-y0d" firstAttribute="centerX" secondItem="0Ov-Ye-y6q" secondAttribute="centerX" id="I96-Tx-tUX"/>
                             <constraint firstItem="0Ov-Ye-y6q" firstAttribute="bottom" secondItem="UMr-NX-4Lx" secondAttribute="bottom" id="Qqp-Hr-fH9"/>
+                            <constraint firstItem="ufK-dW-ex8" firstAttribute="centerX" secondItem="0Ov-Ye-y6q" secondAttribute="centerX" id="Sq3-he-rFH"/>
                             <constraint firstItem="UMr-NX-4Lx" firstAttribute="width" secondItem="LBe-hS-xbs" secondAttribute="width" id="TJM-29-4ms"/>
+                            <constraint firstItem="0Ov-Ye-y6q" firstAttribute="top" secondItem="ufK-dW-ex8" secondAttribute="top" constant="20" id="UXX-Gt-cVK"/>
+                            <constraint firstItem="4xt-L3-y0d" firstAttribute="width" secondItem="0Ov-Ye-y6q" secondAttribute="width" id="mPq-4J-oCD"/>
+                            <constraint firstItem="ufK-dW-ex8" firstAttribute="width" secondItem="LBe-hS-xbs" secondAttribute="width" id="qc0-Ki-gl8"/>
+                            <constraint firstItem="UMr-NX-4Lx" firstAttribute="top" secondItem="4xt-L3-y0d" secondAttribute="bottom" id="rWW-xg-GdD"/>
                             <constraint firstItem="UMr-NX-4Lx" firstAttribute="centerX" secondItem="0Ov-Ye-y6q" secondAttribute="centerX" id="zkg-bs-VMs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Ov-Ye-y6q"/>
                     </view>
                     <connections>
-                        <outlet property="brainButton" destination="zF6-P0-AXH" id="ieW-Gx-fNS"/>
-                        <outlet property="settingButton" destination="cn6-ec-ePe" id="xye-1L-UfV"/>
+                        <outlet property="contentView" destination="4xt-L3-y0d" id="M66-tA-SLn"/>
+                        <outlet property="navBarView" destination="ufK-dW-ex8" id="fJy-Ge-oKa"/>
                         <outlet property="tabBarView" destination="UMr-NX-4Lx" id="5Wl-7G-0cY"/>
+                        <outletCollection property="buttons" destination="zF6-P0-AXH" collectionClass="NSMutableArray" id="5bP-uo-cRX"/>
+                        <outletCollection property="buttons" destination="cn6-ec-ePe" collectionClass="NSMutableArray" id="hW4-4k-ZPO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ck6-tp-cR2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -243,7 +283,7 @@
         <!--Learn-->
         <scene sceneID="4fO-6Y-8Y8">
             <objects>
-                <viewController storyboardIdentifier="learnVC" id="jNM-av-FDn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="learnVC" id="jNM-av-FDn" customClass="LearnViewController" customModule="Polingo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zcS-0V-zby">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -262,10 +302,71 @@
                     <tabBarItem key="tabBarItem" title="Learn" image="brain" id="CII-yy-8Kx">
                         <color key="badgeColor" red="0.1764705882" green="0.20000000000000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="chooseLanguageView" destination="t6U-WG-fix" id="wFR-CD-TzP"/>
+                        <outlet property="flagsCollectionView" destination="iqk-i9-RyM" id="tHb-HH-fnb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tru-Iy-iBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="t6U-WG-fix">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iqk-i9-RyM">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="spv-ZS-MLA"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wdq-KN-Adm">
+                                <size key="itemSize" width="130" height="127"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <cells>
+                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="flagCell" id="wOL-3p-dWS" customClass="FlagCollectionViewCell" customModule="Polingo" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="-23.5" width="130" height="127"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="127"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuC-p6-GhH">
+                                                <rect key="frame" x="33" y="31" width="64" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="64" id="5Ew-bo-ij0"/>
+                                                    <constraint firstAttribute="height" constant="64" id="Rvj-jK-8yB"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="brain">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </view>
+                                    <constraints>
+                                        <constraint firstItem="nuC-p6-GhH" firstAttribute="centerY" secondItem="wOL-3p-dWS" secondAttribute="centerY" id="h8i-6G-PVA"/>
+                                        <constraint firstItem="nuC-p6-GhH" firstAttribute="centerX" secondItem="wOL-3p-dWS" secondAttribute="centerX" id="sRU-oI-56X"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="button" destination="nuC-p6-GhH" id="xw0-1C-cRk"/>
+                                    </connections>
+                                </collectionViewCell>
+                            </cells>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="iqk-i9-RyM" firstAttribute="width" secondItem="Tsb-fv-W0R" secondAttribute="width" id="gIc-4h-SJ7"/>
+                        <constraint firstItem="iqk-i9-RyM" firstAttribute="centerX" secondItem="Tsb-fv-W0R" secondAttribute="centerX" id="ikE-uu-FWR"/>
+                        <constraint firstItem="iqk-i9-RyM" firstAttribute="top" secondItem="Tsb-fv-W0R" secondAttribute="top" id="pVu-ek-dnf"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Tsb-fv-W0R"/>
+                </view>
             </objects>
-            <point key="canvasLocation" x="253" y="1201"/>
+            <point key="canvasLocation" x="-1449" y="1996"/>
         </scene>
         <!--Registration-->
         <scene sceneID="WoH-LD-G8C">
@@ -430,5 +531,6 @@
         <image name="brain" width="30" height="30"/>
         <image name="gear" width="30" height="30"/>
         <image name="settings" width="30" height="30"/>
+        <image name="uk" width="64" height="64"/>
     </resources>
 </document>
