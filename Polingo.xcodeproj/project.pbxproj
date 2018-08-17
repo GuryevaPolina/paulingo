@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		31F793AAEF9ED0A8A9B0D5E7 /* Pods_Polingo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB2A859D0AADFE10FD1D133 /* Pods_Polingo.framework */; };
+		9F15D8F82126BC9300676F6E /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F15D8F72126BC9300676F6E /* Source.swift */; };
+		9F15D8FA2126C30B00676F6E /* TopicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F15D8F92126C30A00676F6E /* TopicCollectionViewCell.swift */; };
+		9F15D8FC2126F48500676F6E /* complete_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9F15D8FB2126F48500676F6E /* complete_sound.mp3 */; };
+		9F15D8FE2126F4E000676F6E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F15D8FD2126F4E000676F6E /* AVFoundation.framework */; };
 		9F22BFF921259D9500B7B89D /* FlagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F22BFF821259D9400B7B89D /* FlagCollectionViewCell.swift */; };
 		9F6EC78F21256A6A00C8ABEA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EC78E21256A6A00C8ABEA /* TabBarViewController.swift */; };
 		9F73B6812123F3960095C974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6802123F3960095C974 /* AppDelegate.swift */; };
@@ -25,6 +29,10 @@
 
 /* Begin PBXFileReference section */
 		2EB2A859D0AADFE10FD1D133 /* Pods_Polingo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Polingo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F15D8F72126BC9300676F6E /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		9F15D8F92126C30A00676F6E /* TopicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCollectionViewCell.swift; sourceTree = "<group>"; };
+		9F15D8FB2126F48500676F6E /* complete_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = complete_sound.mp3; sourceTree = "<group>"; };
+		9F15D8FD2126F4E000676F6E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9F22BFF821259D9400B7B89D /* FlagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagCollectionViewCell.swift; sourceTree = "<group>"; };
 		9F6EC78E21256A6A00C8ABEA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		9F73B67D2123F3960095C974 /* Polingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F15D8FE2126F4E000676F6E /* AVFoundation.framework in Frameworks */,
 				31F793AAEF9ED0A8A9B0D5E7 /* Pods_Polingo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +68,7 @@
 		48E75446A9A996C115B2EE85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F15D8FD2126F4E000676F6E /* AVFoundation.framework */,
 				2EB2A859D0AADFE10FD1D133 /* Pods_Polingo.framework */,
 			);
 			name = Frameworks;
@@ -68,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				9F22BFF821259D9400B7B89D /* FlagCollectionViewCell.swift */,
+				9F15D8F92126C30A00676F6E /* TopicCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -93,6 +104,7 @@
 		9F73B67F2123F3960095C974 /* Polingo */ = {
 			isa = PBXGroup;
 			children = (
+				9F15D8FB2126F48500676F6E /* complete_sound.mp3 */,
 				9F73B69821241B850095C974 /* Model */,
 				9F73B6922123F4D50095C974 /* Registration and authorization */,
 				9F22BFF721259D5D00B7B89D /* Cells */,
@@ -121,6 +133,7 @@
 				9F73B69921241B940095C974 /* User.swift */,
 				9F73B6A4212440FB0095C974 /* CurrentUser.swift */,
 				9F73B6A82124449D0095C974 /* RealmManeger.swift */,
+				9F15D8F72126BC9300676F6E /* Source.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F15D8FC2126F48500676F6E /* complete_sound.mp3 in Resources */,
 				9F73B68B2123F3A20095C974 /* LaunchScreen.storyboard in Resources */,
 				9F73B6882123F3A20095C974 /* Assets.xcassets in Resources */,
 				9F73B6862123F3960095C974 /* Main.storyboard in Resources */,
@@ -260,8 +274,10 @@
 			files = (
 				9F22BFF921259D9500B7B89D /* FlagCollectionViewCell.swift in Sources */,
 				9F73B69A21241B940095C974 /* User.swift in Sources */,
+				9F15D8FA2126C30B00676F6E /* TopicCollectionViewCell.swift in Sources */,
 				9F73B697212415320095C974 /* RegistrationViewController.swift in Sources */,
 				9F73B6A3212436DA0095C974 /* SettingsViewController.swift in Sources */,
+				9F15D8F82126BC9300676F6E /* Source.swift in Sources */,
 				9F73B6A92124449D0095C974 /* RealmManeger.swift in Sources */,
 				9F73B6832123F3960095C974 /* StartViewController.swift in Sources */,
 				9F73B6812123F3960095C974 /* AppDelegate.swift in Sources */,
