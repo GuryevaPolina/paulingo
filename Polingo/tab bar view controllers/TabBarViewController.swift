@@ -11,8 +11,6 @@ import UIKit
 class TabBarViewController: UIViewController {
 
     @IBOutlet weak var tabBarView: UIView!
-    @IBOutlet weak var navBarView: UIView!
-    
     @IBOutlet weak var contentView: UIView!
     
     var learnVC: LearnViewController!
@@ -26,11 +24,8 @@ class TabBarViewController: UIViewController {
     var selectedButtonsImages: [UIImage] = [#imageLiteral(resourceName: "brain_selected"), #imageLiteral(resourceName: "settings_selected")]
     var buttonImages: [UIImage] = [#imageLiteral(resourceName: "brain"), #imageLiteral(resourceName: "settings")]
     
-    var chooseLanguageIsOpen = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         viewInit()
     }
     
@@ -41,12 +36,6 @@ class TabBarViewController: UIViewController {
         tabBarView.layer.shadowOpacity = 1.0
         tabBarView.layer.shadowOffset = .zero
         tabBarView.layer.shadowRadius = 5.0
-        
-        navBarView.layer.shadowColor = UIColor.lightGray.cgColor
-        navBarView.layer.shadowOpacity = 1.0
-        navBarView.layer.shadowOffset = .zero
-        navBarView.layer.shadowRadius = 3.0
-        navBarView.layer.masksToBounds = false
         
         learnVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "learnVC") as! LearnViewController
         settingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "settingVC") as! SettingsViewController
@@ -76,19 +65,6 @@ class TabBarViewController: UIViewController {
         vc.didMove(toParentViewController: self)
         addChildViewController(vc)
         contentView.addSubview(vc.view)
-    }
-    
-    @IBAction func chooseLanguageButtonTapped(_ sender: UIButton) {
-       
-        if let vc = viewControllers[selectedIndex] as? LearnViewController {
-            if !chooseLanguageIsOpen {
-                vc.moveChooseLanguageView()
-                sender.setImage(vc.currLanguageImage, for: .normal)
-                chooseLanguageIsOpen = true
-            }
-        }
-        
-        
     }
     
 }
