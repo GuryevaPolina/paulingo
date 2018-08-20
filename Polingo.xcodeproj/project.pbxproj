@@ -13,6 +13,7 @@
 		9F15D8FC2126F48500676F6E /* complete_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9F15D8FB2126F48500676F6E /* complete_sound.mp3 */; };
 		9F15D8FE2126F4E000676F6E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F15D8FD2126F4E000676F6E /* AVFoundation.framework */; };
 		9F22BFF921259D9500B7B89D /* FlagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F22BFF821259D9400B7B89D /* FlagCollectionViewCell.swift */; };
+		9F6984C0212A931B00596CE7 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6984BF212A931B00596CE7 /* TopicViewController.swift */; };
 		9F6EC78F21256A6A00C8ABEA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EC78E21256A6A00C8ABEA /* TabBarViewController.swift */; };
 		9F73B6812123F3960095C974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6802123F3960095C974 /* AppDelegate.swift */; };
 		9F73B6832123F3960095C974 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6822123F3960095C974 /* StartViewController.swift */; };
@@ -25,6 +26,7 @@
 		9F73B6A3212436DA0095C974 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6A2212436DA0095C974 /* SettingsViewController.swift */; };
 		9F73B6A5212440FB0095C974 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6A4212440FB0095C974 /* CurrentUser.swift */; };
 		9F73B6A92124449D0095C974 /* RealmManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6A82124449D0095C974 /* RealmManeger.swift */; };
+		9FEC07B2212AE92500E8FFC8 /* wrong_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9FEC07B1212AE92500E8FFC8 /* wrong_sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,7 @@
 		9F15D8FB2126F48500676F6E /* complete_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = complete_sound.mp3; sourceTree = "<group>"; };
 		9F15D8FD2126F4E000676F6E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9F22BFF821259D9400B7B89D /* FlagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagCollectionViewCell.swift; sourceTree = "<group>"; };
+		9F6984BF212A931B00596CE7 /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
 		9F6EC78E21256A6A00C8ABEA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		9F73B67D2123F3960095C974 /* Polingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F73B6802123F3960095C974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 		9F73B6A2212436DA0095C974 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9F73B6A4212440FB0095C974 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		9F73B6A82124449D0095C974 /* RealmManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManeger.swift; sourceTree = "<group>"; };
+		9FEC07B1212AE92500E8FFC8 /* wrong_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wrong_sound.mp3; path = "../../../Downloads/Wrong-answer-sound-effect/wrong_sound.mp3"; sourceTree = "<group>"; };
 		B999D030E5E417DD56EB5C31 /* Pods-Polingo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Polingo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Polingo/Pods-Polingo.debug.xcconfig"; sourceTree = "<group>"; };
 		D4F9377F43C467F4AEAF3DEF /* Pods-Polingo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Polingo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Polingo/Pods-Polingo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +87,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		9F6984C1212A932700596CE7 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				9F6984BF212A931B00596CE7 /* TopicViewController.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		9F73B6742123F3960095C974 = {
 			isa = PBXGroup;
 			children = (
@@ -104,11 +116,13 @@
 		9F73B67F2123F3960095C974 /* Polingo */ = {
 			isa = PBXGroup;
 			children = (
+				9FEC07B1212AE92500E8FFC8 /* wrong_sound.mp3 */,
 				9F15D8FB2126F48500676F6E /* complete_sound.mp3 */,
 				9F73B69821241B850095C974 /* Model */,
 				9F73B6922123F4D50095C974 /* Registration and authorization */,
 				9F22BFF721259D5D00B7B89D /* Cells */,
 				9F73B69B21242BD10095C974 /* tab bar view controllers */,
+				9F6984C1212A932700596CE7 /* New Group */,
 				9F73B6802123F3960095C974 /* AppDelegate.swift */,
 				9F73B6842123F3960095C974 /* Main.storyboard */,
 				9F73B6872123F3A20095C974 /* Assets.xcassets */,
@@ -219,6 +233,7 @@
 			files = (
 				9F15D8FC2126F48500676F6E /* complete_sound.mp3 in Resources */,
 				9F73B68B2123F3A20095C974 /* LaunchScreen.storyboard in Resources */,
+				9FEC07B2212AE92500E8FFC8 /* wrong_sound.mp3 in Resources */,
 				9F73B6882123F3A20095C974 /* Assets.xcassets in Resources */,
 				9F73B6862123F3960095C974 /* Main.storyboard in Resources */,
 			);
@@ -279,6 +294,7 @@
 				9F73B6A3212436DA0095C974 /* SettingsViewController.swift in Sources */,
 				9F15D8F82126BC9300676F6E /* Source.swift in Sources */,
 				9F73B6A92124449D0095C974 /* RealmManeger.swift in Sources */,
+				9F6984C0212A931B00596CE7 /* TopicViewController.swift in Sources */,
 				9F73B6832123F3960095C974 /* StartViewController.swift in Sources */,
 				9F73B6812123F3960095C974 /* AppDelegate.swift in Sources */,
 				9F73B6A5212440FB0095C974 /* CurrentUser.swift in Sources */,

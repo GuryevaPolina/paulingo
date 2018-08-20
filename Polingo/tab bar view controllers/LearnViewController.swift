@@ -28,12 +28,13 @@ class LearnViewController: UIViewController {
             scoreLabel.text = "\(score)"
         }
     }
-    var soundEffect = AVAudioPlayer()
     
     @IBOutlet weak var chooseLanguageButton: UIButton!
     
     @IBOutlet weak var topicsCollectionView: UICollectionView!
     @IBOutlet weak var flagsCollectionView: UICollectionView!
+    
+    var levelEnabled: [Bool] = [true, false, false, false, false, false, false, false, false, false, false]
     
     var currLanguageImage: UIImage = #imageLiteral(resourceName: "denmark")
     
@@ -110,26 +111,13 @@ class LearnViewController: UIViewController {
     }
     
     @objc func topicDidChoose(_ sender: UIButton) {
-        print("\(Source.topicImagesLabels[sender.tag].label) topic was choosen")
-        let points = (sender.tag + 1) * 10
-        addPointsAnimation(points: points)
+//        print("\(Source.topicImagesLabels[sender.tag].label) topic was choosen")
+//        let points = (sender.tag + 1) * 10
+//        addPointsAnimation(points: points)
         
-    }
-    
-    func playSound() {
-        guard let completeSound = Bundle.main.path(forResource: "complete_sound.mp3", ofType: nil) else {return}
-        let url = URL(fileURLWithPath: completeSound)
-        
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            try AVAudioSession.sharedInstance().setActive(true)
-            soundEffect = try AVAudioPlayer(contentsOf: url)
-            soundEffect.prepareToPlay()
-            soundEffect.play()
-        }
-        catch {
-            print("error")
-        }
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "topicVC") as? TopicViewController else {return}
+        guard let navigator = navigationController else {return}
+        navigator.pushViewController(vc, animated: true)
     }
     
     func addPointsAnimation(points: Int) {
@@ -137,8 +125,6 @@ class LearnViewController: UIViewController {
         imageView.image = #imageLiteral(resourceName: "diamond")
         imageView.alpha = 0.3
         view.addSubview(imageView)
-        
-        playSound()
         
         UIView.animate(withDuration: 0.6, animations: {
             imageView.alpha = 1.0
@@ -186,6 +172,13 @@ extension LearnViewController: UICollectionViewDataSource {
             cell.topicImage.setImage(Source.topicImagesLabels[indexPath.row].image, for: .normal)
             cell.topicImage.addTarget(self, action: #selector(topicDidChoose(_:)), for: .touchUpInside)
             cell.topicLabel.text = Source.topicImagesLabels[indexPath.row].label
+            if levelEnabled[indexPath.row] {
+                cell.topicImage.isEnabled = true
+                cell.topicLabel.isEnabled = true
+            } else  {
+                cell.topicImage.isEnabled = false
+                cell.topicLabel.isEnabled = false
+            }
             return cell
         }
         
