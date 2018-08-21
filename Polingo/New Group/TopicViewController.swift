@@ -24,16 +24,18 @@ class TopicViewController: UIViewController {
     
     var isSelected = [false, false, false, false, false]
     var currTaskIndex = 0
-    let countOfTasks = 10
+    let countOfTasks = 5
     var countOfCorrectAnswers = 0
+    
+    var currTopic: [String: String] = [:]
     
     var soundEffect = AVAudioPlayer()
     
     override func viewWillAppear(_ animated: Bool) {
-        correctAnswerView.frame = CGRect(x: 0, y: view.frame.size.height, width: view.frame.size.width, height: 128.0)
-        wrongAnswerView.frame = CGRect(x: 0, y: view.frame.size.height, width: view.frame.size.width, height: 128.0)
-        view.insertSubview(correctAnswerView, at: 5)
-        view.insertSubview(wrongAnswerView, at: 5)
+        correctAnswerView.frame = CGRect(x: 0, y: view.frame.size.height, width: view.frame.size.width, height: 170.0)
+        wrongAnswerView.frame = CGRect(x: 0, y: view.frame.size.height, width: view.frame.size.width, height: 170.0)
+        view.addSubview(correctAnswerView)
+        view.addSubview(wrongAnswerView)
     }
     
     override func viewDidLoad() {
@@ -73,11 +75,11 @@ class TopicViewController: UIViewController {
     
     func fillTask() {
         
-        task.text = Array(Source.danish)[currTaskIndex].key
+        task.text = Array(currTopic)[currTaskIndex].key
         
         let n = Int(arc4random() % 4 + 1)
         guard let button = view.viewWithTag(n) as? UIButton else {return}
-        button.setTitle(Array(Source.danish)[currTaskIndex].value, for: .normal)
+        button.setTitle(Array(currTopic)[currTaskIndex].value, for: .normal)
         
         for i in 1..<isSelected.count {
             if i != n {
@@ -146,7 +148,6 @@ class TopicViewController: UIViewController {
     }
     
     func uncorrectAnswerAnimation() {
-        playSound(name: "wrong_sound.mp3")
         UIView.animate(withDuration: 0.5) {
             self.wrongAnswerView.frame.origin.y = self.view.frame.size.height / 2.0
         }
@@ -160,12 +161,17 @@ class TopicViewController: UIViewController {
     
     @IBAction func continueButtonTapped(_ sender: UIButton) {
         if currTaskIndex == countOfTasks - 1 {
-            let alert = UIAlertController(title: "Level complete!", message: "", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Cool!", style: .default, handler: { (_) in
-                guard let navigator = self.navigationController else {return}
-                navigator.popViewController(animated: true)
-            }))
-            present(alert, animated: true)
+            guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "circleVC") as? CongratulationViewController else {return}
+            guard let navigator = self.navigationController else {return}
+            vc.levelImage = UIImageView(image: Source.topicImagesLabels[Source.currLevel].image)
+            
+            Source.levelCompleted[Source.currLevel] = true
+            if Source.currLevel < Source.topicImagesLabels.count - 1 {
+                Source.currLevel += 1
+            }
+            Source.levelEnabled[Source.currLevel] = true
+            
+            navigator.pushViewController(vc, animated: true)
             return
         }
         currTaskIndex += 1
@@ -178,6 +184,12 @@ class TopicViewController: UIViewController {
         if currTaskIndex == countOfTasks - 1 {
             let alert = UIAlertController(title: "Level complete!", message: "", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Cool!", style: .default, handler: { (_) in
+                Source.levelCompleted[Source.currLevel] = true
+                if Source.currLevel < Source.topicImagesLabels.count - 1 {
+                    Source.currLevel += 1
+                }
+                Source.levelEnabled[Source.currLevel] = true
+                
                 guard let navigator = self.navigationController else {return}
                 navigator.popViewController(animated: true)
             }))
@@ -199,7 +211,7 @@ class TopicViewController: UIViewController {
                 variant.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
                 variant.setTitleColor(#colorLiteral(red: 0.1764705882, green: 0.2, blue: 0.262745098, alpha: 1), for: .normal)
                 
-                if variant.title(for: .normal) == Source.danish[task.text!] {
+                if variant.title(for: .normal) == currTopic[task.text!] {
                     correctAnswerAnimation()
                 } else {
                     uncorrectAnswerAnimation()

@@ -34,8 +34,6 @@ class LearnViewController: UIViewController {
     @IBOutlet weak var topicsCollectionView: UICollectionView!
     @IBOutlet weak var flagsCollectionView: UICollectionView!
     
-    var levelEnabled: [Bool] = [true, false, false, false, false, false, false, false, false, false, false]
-    
     var currLanguageImage: UIImage = #imageLiteral(resourceName: "denmark")
     
     override func viewDidLoad() {
@@ -50,10 +48,14 @@ class LearnViewController: UIViewController {
     
     func viewInit() {
         chooseLanguageView.frame = CGRect(x: 0.0, y: navBarView.frame.maxY - heightOfCollectionView, width: view.frame.size.width, height: heightOfCollectionView)
-       // view.insertSubview(chooseLanguageView, at: 0)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        topicsCollectionView.reloadItems(at: [IndexPath(row: Source.currLevel, section: 0)])
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         navBarView.layer.shadowColor = UIColor.lightGray.cgColor
         navBarView.layer.shadowOpacity = 1.0
         navBarView.layer.shadowOffset = .zero
@@ -117,6 +119,7 @@ class LearnViewController: UIViewController {
         
         guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "topicVC") as? TopicViewController else {return}
         guard let navigator = navigationController else {return}
+        vc.currTopic = Source.topic[sender.tag]
         navigator.pushViewController(vc, animated: true)
     }
     
@@ -172,13 +175,10 @@ extension LearnViewController: UICollectionViewDataSource {
             cell.topicImage.setImage(Source.topicImagesLabels[indexPath.row].image, for: .normal)
             cell.topicImage.addTarget(self, action: #selector(topicDidChoose(_:)), for: .touchUpInside)
             cell.topicLabel.text = Source.topicImagesLabels[indexPath.row].label
-            if levelEnabled[indexPath.row] {
-                cell.topicImage.isEnabled = true
-                cell.topicLabel.isEnabled = true
-            } else  {
-                cell.topicImage.isEnabled = false
-                cell.topicLabel.isEnabled = false
-            }
+            
+            cell.completeImage.isHidden = !Source.levelCompleted[indexPath.row]
+            cell.topicImage.isEnabled = Source.levelEnabled[indexPath.row]
+            cell.topicLabel.isEnabled = Source.levelEnabled[indexPath.row]
             return cell
         }
         
@@ -187,10 +187,6 @@ extension LearnViewController: UICollectionViewDataSource {
 }
 
 extension LearnViewController: UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //flagsCollectionView.reloadData()
-    }
     
 }
 

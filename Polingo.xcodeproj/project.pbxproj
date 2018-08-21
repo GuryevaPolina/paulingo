@@ -26,6 +26,8 @@
 		9F73B6A3212436DA0095C974 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6A2212436DA0095C974 /* SettingsViewController.swift */; };
 		9F73B6A5212440FB0095C974 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6A4212440FB0095C974 /* CurrentUser.swift */; };
 		9F73B6A92124449D0095C974 /* RealmManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73B6A82124449D0095C974 /* RealmManeger.swift */; };
+		9FB911FE212C207500F2F8B1 /* CongratulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB911FD212C207500F2F8B1 /* CongratulationViewController.swift */; };
+		9FB91200212C2E5500F2F8B1 /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9FB911FF212C2E5500F2F8B1 /* success.mp3 */; };
 		9FEC07B2212AE92500E8FFC8 /* wrong_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9FEC07B1212AE92500E8FFC8 /* wrong_sound.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		9F73B6A2212436DA0095C974 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9F73B6A4212440FB0095C974 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		9F73B6A82124449D0095C974 /* RealmManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManeger.swift; sourceTree = "<group>"; };
+		9FB911FD212C207500F2F8B1 /* CongratulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationViewController.swift; sourceTree = "<group>"; };
+		9FB911FF212C2E5500F2F8B1 /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = success.mp3; path = ../../../Downloads/success.mp3; sourceTree = "<group>"; };
 		9FEC07B1212AE92500E8FFC8 /* wrong_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wrong_sound.mp3; path = "../../../Downloads/Wrong-answer-sound-effect/wrong_sound.mp3"; sourceTree = "<group>"; };
 		B999D030E5E417DD56EB5C31 /* Pods-Polingo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Polingo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Polingo/Pods-Polingo.debug.xcconfig"; sourceTree = "<group>"; };
 		D4F9377F43C467F4AEAF3DEF /* Pods-Polingo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Polingo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Polingo/Pods-Polingo.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				9F6984BF212A931B00596CE7 /* TopicViewController.swift */,
+				9FB911FD212C207500F2F8B1 /* CongratulationViewController.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 		9F73B67F2123F3960095C974 /* Polingo */ = {
 			isa = PBXGroup;
 			children = (
+				9FB911FF212C2E5500F2F8B1 /* success.mp3 */,
 				9FEC07B1212AE92500E8FFC8 /* wrong_sound.mp3 */,
 				9F15D8FB2126F48500676F6E /* complete_sound.mp3 */,
 				9F73B69821241B850095C974 /* Model */,
@@ -236,6 +242,7 @@
 				9FEC07B2212AE92500E8FFC8 /* wrong_sound.mp3 in Resources */,
 				9F73B6882123F3A20095C974 /* Assets.xcassets in Resources */,
 				9F73B6862123F3960095C974 /* Main.storyboard in Resources */,
+				9FB91200212C2E5500F2F8B1 /* success.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB911FE212C207500F2F8B1 /* CongratulationViewController.swift in Sources */,
 				9F22BFF921259D9500B7B89D /* FlagCollectionViewCell.swift in Sources */,
 				9F73B69A21241B940095C974 /* User.swift in Sources */,
 				9F15D8FA2126C30B00676F6E /* TopicCollectionViewCell.swift in Sources */,

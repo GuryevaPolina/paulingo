@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         viewInit()
         
         //print(AppDelegate.realmManager.allUsers)
-       // print(AppDelegate.realmManager.currentUser)
+        //print(AppDelegate.realmManager.currentUser)
         
         if !AppDelegate.username.isEmpty && !AppDelegate.password.isEmpty {
             guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar") as? TabBarViewController else {return}
